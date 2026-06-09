@@ -52,11 +52,16 @@
 <div class="dashboard-body">
 <aside class="sidebar">
 <div class="sidebar-header">
-<div class="section-label">专题分类</div>
+<!-- 搜索栏在专题分类上方 -->
+<div class="search-wrapper">
+<span class="search-icon">⌕</span>
+<input type="text" id="search-input" placeholder="搜索论文标题…">
+</div>
 <div class="search-mode-toggle">
 <button class="search-mode-btn active" id="search-title-btn">按标题</button>
 <button class="search-mode-btn" id="search-author-btn">按作者</button>
 </div>
+<div class="section-label">专题分类</div>
 </div>
 <div class="topic-scroll" id="topic-list"></div>
 </aside>
@@ -73,7 +78,9 @@
 </select>
 </div>
 </div>
-<div id="papers-list" class="papers-list"></div>
+<div id="stats-container"></div>
+        <div id="year-filter"></div>
+        <div id="papers-list" class="papers-list"></div>
 </main>
 </div>
 </div>
