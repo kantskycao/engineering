@@ -749,17 +749,170 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: rgba(100, 90, 80, 0.20); }
 
 /* ═══ Responsive ═══ */
+/* ═══ Tablet / Mobile ═══ */
 @media (max-width: 768px) {
+  :root {
+    --sidebar-width: 100%;
+    --header-height: 52px;
+  }
+
+  .dashboard-body {
+    flex-direction: column;
+  }
+
   .sidebar {
     width: 100%;
     position: relative;
     top: 0;
-    max-height: 200px;
+    max-height: 45vh;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
+    overflow-y: auto;
+    z-index: 50;
   }
-  .main-content { margin-left: 0; }
-  .dashboard-body { flex-direction: column; }
-  .paper-header { flex-direction: column; }
-  .paper-citations-group { flex-direction: row; gap: 6px; }
+
+  .sidebar-header {
+    padding: 12px 14px 10px;
+  }
+
+  .sidebar-header .section-label {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .topic-scroll {
+    padding: 4px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .topic-item {
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 10px;
+    margin-bottom: 0;
+    min-width: 0;
+    width: auto;
+  }
+
+  .topic-meta {
+    text-align: left;
+    margin-left: 0;
+    display: flex;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .topic-count, .topic-citations {
+    display: inline;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  #current-topic-title {
+    font-size: 18px;
+  }
+
+  .paper-card {
+    padding: 14px 16px;
+  }
+
+  .paper-header {
+    flex-direction: column;
+  }
+
+  .paper-citations-group {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .paper-title {
+    font-size: 14px;
+  }
+
+  .header-logo h1 {
+    font-size: 14px;
+  }
+
+  .dashboard-header {
+    padding: 0 14px;
+  }
+
+  .header-badge {
+    display: none;
+  }
+
+  .login-card {
+    padding: 32px 24px;
+  }
+
+  .login-brand h1 {
+    font-size: 18px;
+  }
+}
+
+/* ═══ Small phones ═══ */
+@media (max-width: 480px) {
+  .sidebar {
+    max-height: 40vh;
+  }
+
+  .topic-item {
+    flex: 0 0 auto;
+    padding: 5px 8px;
+  }
+
+  .topic-name {
+    font-size: 12px;
+  }
+
+  .topic-name-sub {
+    display: none;
+  }
+
+  .topic-meta {
+    font-size: 10px;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+
+  .paper-card {
+    padding: 12px 14px;
+  }
+
+  .paper-title {
+    font-size: 13px;
+  }
+
+  .paper-citations-total {
+    font-size: 18px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .bibtex-pre {
+    font-size: 11px;
+    padding: 10px 12px;
+  }
+
+  .header-user {
+    display: none;
+  }
 }

@@ -16,7 +16,7 @@ const TOPIC_ZH = {
   'SI: Subwavelength Optics': '亚波长光学专刊',
   'Advanced Antennas for Wireless Connectivity': '先进无线天线',
   'Complex Network': '复杂网络',
-  'Next Ten Years: Create a Better Future': '未来十年',
+  'Next Ten Years: Create a Better Future': '未来十年：创造更美好的未来',
   'Subwavelength Optics': '亚波长光学',
   'Metamaterials': '超材料',
   'VSI: SIN Theory and Technology': '空间信息网络理论与技术',
