@@ -1,0 +1,11 @@
+name = "eng-papers-api"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "eng-papers"
+database_id = "b7ca34b8-7de4-4fe5-ade5-6dc3ed06acc0"
+
+[vars]
+AUTH_SECRET = "e1fa8be62585ed142dcd0b1cec6eee7fa761853cd0f03726b6c87c9bfef0e74b"

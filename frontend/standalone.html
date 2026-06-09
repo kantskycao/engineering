@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Engineering 论文引用</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login-page" class="page active">
+<div class="login-container">
+<div class="login-card">
+<div class="login-brand">
+<div class="brand-mark">E</div>
+<h1>论文引用管理系统</h1>
+<p>Engineering (2023–2025)</p>
+</div>
+<form id="login-form">
+<div class="form-group">
+<label for="username">用户名</label>
+<input type="text" id="username" placeholder="admin" autocomplete="username" value="admin">
+</div>
+<div class="form-group">
+<label for="password">密码</label>
+<input type="password" id="password" placeholder="••••••••" autocomplete="current-password" value="admin123">
+</div>
+<div id="login-error" class="error-message" style="display:none;"></div>
+<button type="submit" id="login-btn" class="btn btn-primary btn-full">
+<span class="btn-text">登 录</span>
+<span class="btn-loading" style="display:none;">登录中…</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+
+<div id="dashboard-page" class="page">
+<header class="dashboard-header">
+<div class="header-left">
+<div class="header-logo">
+<div class="logo-icon">E</div>
+<h1>论文引用</h1>
+</div>
+<span class="header-badge">2023–2025</span>
+</div>
+<div class="header-right">
+<span class="header-user" id="header-username">admin</span>
+<button id="logout-btn" class="btn-logout">退出</button>
+</div>
+</header>
+<div class="dashboard-body">
+<aside class="sidebar">
+<div class="sidebar-header">
+<div class="section-label">专题分类</div>
+<div class="search-wrapper">
+<span class="search-icon">⌕</span>
+<input type="text" id="search-input" placeholder="搜索论文标题…">
+</div>
+<div class="search-mode-toggle">
+<button class="search-mode-btn active" id="search-title-btn">按标题</button>
+<button class="search-mode-btn" id="search-author-btn">按作者</button>
+</div>
+</div>
+<div class="topic-scroll" id="topic-list"></div>
+</aside>
+<main class="main-content">
+<div class="content-header">
+<div class="content-title-area">
+<h2 id="current-topic-title">全部论文</h2>
+<span id="papers-count" class="count-badge">0 篇</span>
+</div>
+<div class="content-controls">
+<select id="sort-select" class="sort-select">
+<option value="citations">按引用 ↓</option>
+<option value="year">按年份 ↓</option>
+</select>
+</div>
+</div>
+<div id="papers-list" class="papers-list"></div>
+</main>
+</div>
+</div>
+
+<div id="bibtex-modal" class="modal" style="display:none;">
+<div class="modal-overlay" id="modal-overlay"></div>
+<div class="modal-content">
+<div class="modal-header">
+<h3>BibTeX 引用</h3>
+<button class="modal-close" id="modal-close">✕</button>
+</div>
+<div class="modal-body">
+<pre id="bibtex-text" class="bibtex-pre"></pre>
+<button id="copy-bibtex-btn" class="btn btn-primary">复制到剪贴板</button>
+<span id="copy-success" class="copy-success" style="display:none;">✓ 已复制</span>
+</div>
+</div>
+</div>
+
+<script src="standalone.js"></script>
+</body>
+</html>
